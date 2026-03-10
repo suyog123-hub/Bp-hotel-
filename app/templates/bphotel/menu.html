@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+      <!-- Menu Section -->
+    <section id="menu" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5 mx-auto" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-label mt-5" id=#menutabs>What We Serve</span><br>
+                <h2 class="section-title">Our <span class="gradient-text">Menu</span></h2>
+                <p class="section-description">Discover our carefully crafted selection</p>
+            </div>
+            <div class="qr">
+                <div class="col-4  mt-5 mb-5 mx-auto ">
+                    <img src="{% static 'images/qr.png' %}" alt="">
+                </div>
+            </div>
+
+            <!-- Menu Categories -->
+            <ul class="nav nav-pills d-flex justify-content-center mb-5" id="menuTabs" data-aos="fade-up" data-aos-delay="100">
+                {% for i in title %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.GET.category == i.id|stringformat:'s' %}active{% endif %}" href="?category={{ i.id }}">{{i.title}}</a>
+                </li>
+                    {% endfor %}
+            </ul>
+
+            <div class="tab-content">
+                <!-- Coffee Menu -->
+                <div class="tab-pane fade show active" id="coffee">
+                    <div class="row">
+                          {% for i in item  %}
+                        <div class="col-md-6 mb-4" data-aos="fade-up" 
+                        data-aos-delay="100">
+                      
+                            <div class="menu-item">
+                                <div class="menu-header">
+                                    <h4 class="menu-title">{{i.title}}</h4>
+                                    <span class="menu-price">Rs.{{i.price}}</span>
+                                </div>
+                                <p class="menu-description">{{i.desc}}</p>
+                            </div>
+                         
+                        </div>
+                           {% endfor %}
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

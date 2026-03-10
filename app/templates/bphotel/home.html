@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 fade-in">
+          <h1 class="hero-title">Welcome To My Resturant</h1>
+          <p class="hero-subtitle">Experience the rich flavors of traditional Mediterranean cooking in an elegant atmosphere. Our chefs craft each dish with passion and the finest ingredients.</p>
+          
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="{% url 'reserved' %}" class="btn btn-primary">Book a Table</a>
+            <a href="{% url 'menu' %}" class="btn btn-outline">View Menu</a>
+          </div>
+          
+          <div class="d-flex flex-wrap align-items-center gap-4">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-clock me-2" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <div>
+                <small class="text-muted d-block">Open Daily</small>
+                <div class="fw-medium">11:00 AM - 10:30 PM</div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-geo-alt me-2" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <div>
+                <small class="text-muted d-block">Location</small>
+                <div class="fw-medium">Lalitpur District</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-6 fade-in">
+          <div class="hero-images">
+            <div class="main-image">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Restaurant Interior">
+            </div>
+            <div class="floating-images">
+              <div class="floating-image">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mediterranean Dish">
+              </div>
+              <div class="floating-image">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chef's Special">
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="qr">
+          <h1>Scan here for the Menu</h1>
+                <div class="col-4  mt-5 mb-5 mx-auto ">
+                    <img src="{% static 'images/qr.png' %}" alt="">
+                </div>
+            </div>
+      </div>
+    </div>
+  </section> 
+{% endblock content %}

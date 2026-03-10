@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+     <!-- Reservation Section -->
+    <section id="reservation" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="section-header text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                        <span class="section-label mt-5">Book Your Visit</span><br>
+                        <h2 class="section-title">Reserve a <span class="gradient-text">Table</span></h2>
+                        <p class="section-description">Secure your spot at BP Hotel</p>
+                    </div>
+                    <div class="reservation-form" data-aos="zoom-in" data-aos-delay="200">
+                        <form method="post" action="{% url 'reserved' %}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 mb-3" data-aos="fade-right" data-aos-delay="300">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3" data-aos="fade-left" data-aos-delay="300">
+                                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-md-6 mb-3" data-aos="fade-right" data-aos-delay="400">
+                                    <input type="number" name="phone" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-md-6 mb-3" data-aos="fade-left" data-aos-delay="400">
+                                    <select name="number_of_people" class="form-select" required>
+                                        <option value="">Number of Guests</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">2 People</option>
+                                        <option value="3">3 People</option>
+                                        <option value="4">4 People</option>
+                                        <option value="5">5+ People</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3" data-aos="fade-right" data-aos-delay="500">
+                                    <input type="date" name="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3" data-aos="fade-left" data-aos-delay="500">
+                                    <input type="time" name="time" class="form-control" required>
+                                </div>
+                                <div class="col-12 mb-3" data-aos="fade-up" data-aos-delay="600">
+                                    <textarea class="form-control" name="request1" rows="3" placeholder="Special Requests (Optional)"></textarea>
+                                </div>
+                                <div class="col-12" data-aos="zoom-in" data-aos-delay="700">
+                                    <button type="submit" class="btn btn-primary w-100 btn-reserve-submit">Book Table</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us</p>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mb-5  fade-in">
+                <div class="contact-card">
+                    <h3 class="mb-4">Contact Information</h3>
+                    <p class="text-muted mb-4">Feel free to reach out with any questions about reservations or events.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <div>
+                                <a href="mailto:ksuyog697@gmail.com"><h5>Email</h5>
+                                <p class="text-muted">ksuyog697@gmail.com</p></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-telephone"></i>
+                            <div>
+                               <a href="tel:9766387873"> <h5>Phone</h5>
+                                <p class="text-muted">+977 9766387873</p></a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p class="text-muted">Lalitpur,imadol<br>srijana nagar ,5</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

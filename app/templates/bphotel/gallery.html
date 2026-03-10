@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-label mt-5">Visual Experience</span><br>
+                <h2 class="section-title">Our <span class="gradient-text">Gallery</span></h2>
+                <p class="section-description">Glimpses of our café and culinary creations</p>
+            </div>
+            <div class="row g-4">
+                {% for i in image %}
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="{{i.image.url}}" alt="Coffee" class="img-fluid">
+                        
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

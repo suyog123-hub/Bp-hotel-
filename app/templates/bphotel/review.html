@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+      <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up" data-aos-duration="800">
+                <span class="section-label mt-5">What People Say</span><br>
+                <h2 class="section-title">Customer <span class="gradient-text">Reviews</span></h2>
+                <p class="section-description">Hear from our happy customers</p>
+            </div>
+            <div class="row">
+                {% for i in testitonomial %}
+                  
+            
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">{{i.desc}}</p>
+                        <div class="testimonial-author">
+                            <h5 class="mb-0 gradient-text">{{i.name}}</h5>
+                            <small class="text-muted">{{i.short_desc}}</small>
+                        </div>
+                    </div>
+                </div>
+                  {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}
