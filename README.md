@@ -1,8 +1,5 @@
 # 🏨 BP Hotel Booking System
 
-A simple **Hotel Booking Web Application** built with Python.  
-The system allows users to browse rooms, register, log in, and make hotel reservations online.
-
 🌐 **Live Website:**  
 https://bphotel.pythonanywhere.com
 
