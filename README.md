@@ -12,7 +12,6 @@ https://bphotel.pythonanywhere.com
 - View Available Rooms
 - Online Room Booking
 - Simple and Clean Interface
-- Responsive Design
 
 ---
 
