@@ -1,4 +1,4 @@
-# 🏨 BP Hotel Booking Syste
+# 🏨 BP Hotel Booking System
 
 🌐 **Live Website:**  
 https://bphotel.pythonanywhere.com
